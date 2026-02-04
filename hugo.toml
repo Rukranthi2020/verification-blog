@@ -1,4 +1,4 @@
-baseURL = "https://<YOUR_GITHUB_USERNAME>.github.io/verification-blog/"
+baseURL = "https://rukranthi2020.github.io/verification-blog/"
 languageCode = "en-us"
 title = "Verification Blog"
 theme = "PaperMod"
