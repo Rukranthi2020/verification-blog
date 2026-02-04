@@ -1,0 +1,16 @@
+baseURL = "https://<YOUR_GITHUB_USERNAME>.github.io/verification-blog/"
+languageCode = "en-us"
+title = "Verification Blog"
+theme = "PaperMod"
+
+[params]
+  env = "production"
+  ShowReadingTime = true
+  ShowCodeCopyButtons = true
+  ShowToc = true
+
+[menu]
+  [[menu.main]]
+    name = "Posts"
+    url = "/posts/"
+    weight = 10
