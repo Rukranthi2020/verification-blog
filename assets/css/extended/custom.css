@@ -8,6 +8,9 @@
   --content: rgb(17, 24, 39);
   --code-bg: rgb(245, 246, 248);
   --border: rgb(229, 231, 235);
+
+  /* PaperMod layout: widen the content column */
+  --main-width: 980px;   /* default is narrower; adjust 920–1100px to taste */
 }
 
 .dark {
@@ -32,4 +35,12 @@
 
 ::selection {
   background: rgba(59, 130, 246, 0.25);
+}
+
+/* Allow posts (esp. code-heavy) to use more horizontal space on wide screens */
+@media (min-width: 1200px) {
+  .post-content pre {
+    margin-left: 0;
+    margin-right: 0;
+  }
 }
