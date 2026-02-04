@@ -1,6 +1,7 @@
 :root {
-  --theme: rgb(255, 255, 255);
-  --entry: rgb(250, 250, 252);
+  /* Soft light background (not pure white) */
+  --theme: rgb(246, 247, 251);
+  --entry: rgb(255, 255, 255);
   --primary: rgb(17, 24, 39);
   --secondary: rgb(75, 85, 99);
   --tertiary: rgb(107, 114, 128);

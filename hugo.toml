@@ -17,7 +17,7 @@ enableRobotsTXT = true
   description = "Notes on software engineering, verification, and technical deep dives."
   author = "Kranthi"
 
-  defaultTheme = "auto"        # auto | light | dark
+  defaultTheme = "light"       # auto | light | dark
   disableThemeToggle = false
 
   ShowReadingTime = true
@@ -30,8 +30,8 @@ enableRobotsTXT = true
 
   # Home page
   [params.homeInfoParams]
-    Title = "Verification Blog"
-    Content = "Technical notes, experiments, and write-ups."
+    Title = "Hi, I’m Kranthi"
+    Content = "I write about software engineering, verification, and practical technical deep dives."
 
   # Social icons (add/remove as you like)
   [[params.socialIcons]]
@@ -56,6 +56,11 @@ enableRobotsTXT = true
     name = "Search"
     url = "/search/"
     weight = 5
+
+  [[menu.main]]
+    name = "About"
+    url = "/about/"
+    weight = 7
 
   [[menu.main]]
     name = "Posts"
