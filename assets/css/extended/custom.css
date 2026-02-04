@@ -6,8 +6,27 @@
   /* Understated accent (used mainly for links and small highlights) */
   --accent: #2563eb; /* blue */
 
+  /* Make the reading column a bit wider (PaperMod default is 720px) */
+  --main-width: 900px;
+
   /* PaperMod uses these CSS variables in multiple places */
   --link-color: var(--accent);
+}
+
+/* Premium background (not plain white), while keeping content readable */
+html, body {
+  background:
+    radial-gradient(1200px circle at 15% 0%, rgba(37, 99, 235, 0.10), transparent 45%),
+    radial-gradient(900px circle at 85% 10%, rgba(15, 23, 42, 0.06), transparent 40%),
+    linear-gradient(180deg, rgba(250, 250, 252, 1), rgba(245, 247, 250, 1));
+}
+
+:root[data-theme="dark"] html,
+:root[data-theme="dark"] body {
+  background:
+    radial-gradient(1200px circle at 15% 0%, rgba(37, 99, 235, 0.16), transparent 45%),
+    radial-gradient(900px circle at 85% 10%, rgba(255, 255, 255, 0.05), transparent 40%),
+    linear-gradient(180deg, rgb(17, 18, 20), rgb(11, 12, 14));
 }
 
 /* Typography + spacing (subtle) */
@@ -48,9 +67,18 @@ a:hover,
   border-radius: 14px;
 }
 
-/* Background: keep it clean; add only a faint tint */
+/* Let the page background show through; keep main container transparent */
 .main {
-  background: radial-gradient(900px circle at 20% -10%, rgba(37, 99, 235, 0.04), transparent 45%);
+  background: transparent;
+}
+
+/* Give content surfaces a subtle "glass" fill so text remains readable */
+.post-single,
+.post-entry,
+.first-entry,
+.archive-entry {
+  background: color-mix(in srgb, var(--entry) 92%, transparent);
+  backdrop-filter: saturate(160%) blur(10px);
 }
 
 /* Code blocks: slightly more premium */
