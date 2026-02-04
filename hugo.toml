@@ -3,14 +3,66 @@ languageCode = "en-us"
 title = "Verification Blog"
 theme = "PaperMod"
 
+enableRobotsTXT = true
+
+[pagination]
+  pagerSize = 10
+
+[minify]
+  disableXML = true
+  minifyOutput = true
+
 [params]
   env = "production"
+  description = "Notes on software engineering, verification, and technical deep dives."
+  author = "Kranthi"
+
+  defaultTheme = "auto"        # auto | light | dark
+  disableThemeToggle = false
+
   ShowReadingTime = true
   ShowCodeCopyButtons = true
   ShowToc = true
+  TocOpen = false
+  ShowBreadCrumbs = true
+  ShowPostNavLinks = true
+  ShowShareButtons = true
+
+  # Home page
+  [params.homeInfoParams]
+    Title = "Verification Blog"
+    Content = "Technical notes, experiments, and write-ups."
+
+  # Social icons (add/remove as you like)
+  [[params.socialIcons]]
+    name = "github"
+    url = "https://github.com/Rukranthi2020"
+
+  # Enable search (built-in PaperMod)
+  [params.fuseOpts]
+    isCaseSensitive = false
+    shouldSort = true
+    location = 0
+    distance = 1000
+    threshold = 0.4
+    minMatchCharLength = 2
+    keys = ["title", "permalink", "summary", "content"]
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
 
 [menu]
+  [[menu.main]]
+    name = "Search"
+    url = "/search/"
+    weight = 5
+
   [[menu.main]]
     name = "Posts"
     url = "/posts/"
     weight = 10
+
+  [[menu.main]]
+    name = "Tags"
+    url = "/tags/"
+    weight = 20

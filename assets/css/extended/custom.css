@@ -1,0 +1,34 @@
+:root {
+  --theme: rgb(255, 255, 255);
+  --entry: rgb(250, 250, 252);
+  --primary: rgb(17, 24, 39);
+  --secondary: rgb(75, 85, 99);
+  --tertiary: rgb(107, 114, 128);
+  --content: rgb(17, 24, 39);
+  --code-bg: rgb(245, 246, 248);
+  --border: rgb(229, 231, 235);
+}
+
+.dark {
+  --theme: rgb(10, 10, 12);
+  --entry: rgb(17, 17, 20);
+  --primary: rgb(243, 244, 246);
+  --secondary: rgb(156, 163, 175);
+  --tertiary: rgb(107, 114, 128);
+  --content: rgb(229, 231, 235);
+  --code-bg: rgb(24, 24, 28);
+  --border: rgb(39, 39, 42);
+}
+
+/* Slightly tighter, more technical look */
+.post-content pre code {
+  font-size: 0.9rem;
+}
+
+.post-content code {
+  border-radius: 6px;
+}
+
+::selection {
+  background: rgba(59, 130, 246, 0.25);
+}
