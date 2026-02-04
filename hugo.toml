@@ -17,7 +17,7 @@ enableRobotsTXT = true
   description = "Notes on software engineering, verification, and technical deep dives."
   author = "Kranthi"
 
-  defaultTheme = "light"       # auto | light | dark
+  defaultTheme = "auto"       # auto | light | dark
   disableThemeToggle = false
 
   ShowReadingTime = true

@@ -1,46 +1,78 @@
+/* PaperMod auto-loads: assets/css/extended/*.css
+   Custom "richer" look: subtle gradients, stronger accent colors, nicer cards.
+   Tweak colors below to match your preference.
+*/
+
 :root {
-  /* Soft light background (not pure white) */
-  --theme: rgb(246, 247, 251);
-  --entry: rgb(255, 255, 255);
-  --primary: rgb(17, 24, 39);
-  --secondary: rgb(75, 85, 99);
-  --tertiary: rgb(107, 114, 128);
-  --content: rgb(17, 24, 39);
-  --code-bg: rgb(245, 246, 248);
-  --border: rgb(229, 231, 235);
+  /* Accent palette */
+  --accent-1: #7c3aed; /* purple */
+  --accent-2: #06b6d4; /* cyan */
+  --accent-3: #f97316; /* orange */
 
-  /* PaperMod layout: widen the content column */
-  --main-width: 980px;   /* default is narrower; adjust 920–1100px to taste */
+  /* Link + highlight */
+  --link-color: color-mix(in srgb, var(--accent-2) 85%, black);
 }
 
-.dark {
-  --theme: rgb(10, 10, 12);
-  --entry: rgb(17, 17, 20);
-  --primary: rgb(243, 244, 246);
-  --secondary: rgb(156, 163, 175);
-  --tertiary: rgb(107, 114, 128);
-  --content: rgb(229, 231, 235);
-  --code-bg: rgb(24, 24, 28);
-  --border: rgb(39, 39, 42);
+/* Make links feel more vibrant */
+a,
+.post-content a {
+  color: var(--link-color);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
 }
 
-/* Slightly tighter, more technical look */
-.post-content pre code {
-  font-size: 0.9rem;
+a:hover,
+.post-content a:hover {
+  color: color-mix(in srgb, var(--accent-1) 75%, black);
 }
 
-.post-content code {
-  border-radius: 6px;
+/* Give the header a subtle gradient underline */
+.header {
+  position: sticky;
+  top: 0;
+  backdrop-filter: saturate(180%) blur(12px);
 }
 
-::selection {
-  background: rgba(59, 130, 246, 0.25);
+.header:after {
+  content: "";
+  display: block;
+  height: 3px;
+  background: linear-gradient(90deg, var(--accent-1), var(--accent-2), var(--accent-3));
+  opacity: 0.85;
 }
 
-/* Allow posts (esp. code-heavy) to use more horizontal space on wide screens */
-@media (min-width: 1200px) {
-  .post-content pre {
-    margin-left: 0;
-    margin-right: 0;
-  }
+/* Richer card look for list entries */
+.post-entry,
+.first-entry,
+.archive-entry {
+  border: 1px solid color-mix(in srgb, var(--accent-2) 20%, transparent);
+  box-shadow:
+    0 1px 2px rgba(0, 0, 0, 0.06),
+    0 10px 30px rgba(124, 58, 237, 0.06);
+  border-radius: 14px;
+}
+
+/* Add a gentle gradient background to the page */
+.main {
+  background:
+    radial-gradient(900px circle at 10% -10%, rgba(124, 58, 237, 0.08), transparent 45%),
+    radial-gradient(900px circle at 90% 0%, rgba(6, 182, 212, 0.08), transparent 40%),
+    radial-gradient(900px circle at 50% 100%, rgba(249, 115, 22, 0.06), transparent 45%);
+}
+
+/* Slightly nicer code blocks */
+pre,
+code {
+  border-radius: 10px;
+}
+
+/* Better looking tags */
+.post-tags a {
+  border: 1px solid color-mix(in srgb, var(--accent-1) 25%, transparent);
+  background: color-mix(in srgb, var(--accent-1) 10%, transparent);
+}
+
+/* Make the home intro pop */
+.home-info .entry-content {
+  font-size: 1.05rem;
 }
