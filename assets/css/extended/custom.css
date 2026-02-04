@@ -25,6 +25,14 @@ body {
   background: var(--theme) !important;
 }
 
+/* PaperMod sets `.list { background: var(--code-bg); }` which can hide the page background.
+   Ensure list pages also use the solid page background.
+*/
+.list,
+body.list {
+  background: var(--theme) !important;
+}
+
 /* Typography + spacing (subtle) */
 .post-content {
   line-height: 1.75;
