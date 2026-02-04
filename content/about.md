@@ -8,7 +8,7 @@ draft: false
 
 Hi — I’m **Kranthi**.
 
-- I work on/around **software engineering** and **verification**.
+- I work on/around **hardware engineering** and **verification**.
 - This blog is where I publish short notes, deeper write-ups, and experiments.
 
 ## What you'll find here
