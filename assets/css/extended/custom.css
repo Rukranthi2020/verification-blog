@@ -9,18 +9,20 @@
   /* Make the reading column wider (PaperMod default is 720px) */
   --main-width: 1040px;
 
+  /* Solid page background (outside content). PaperMod sets body bg to var(--theme). */
+  --theme: #f3f4f6; /* light gray */
+
   /* PaperMod uses these CSS variables in multiple places */
   --link-color: var(--accent);
 }
 
-/* Solid page background (outside content) */
-html, body {
-  background: #f3f4f6; /* light gray */
+:root[data-theme="dark"] {
+  --theme: #0b0f19; /* deep slate */
 }
 
-:root[data-theme="dark"] html,
-:root[data-theme="dark"] body {
-  background: #0b0f19; /* deep slate */
+/* Safety override (in case any rule sets body background explicitly later) */
+body {
+  background: var(--theme) !important;
 }
 
 /* Typography + spacing (subtle) */
