@@ -11,7 +11,7 @@
 
 /* 2. THE BACKGROUND - Creates the "expensive" depth */
 body {
-    background: radial-gradient(circle at top, #2d333b 0%, #1a1c1e 100%) !important;
+    background: radial-gradient(circle at center, #323941 0%, #1a1c1e 100%) !important;
     background-attachment: fixed;
 }
 
