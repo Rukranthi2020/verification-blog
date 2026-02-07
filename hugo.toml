@@ -31,7 +31,7 @@ enableRobotsTXT = true
   # Home page
   [params.homeInfoParams]
     Title = "Hi, I’m Kranthi"
-    Content = "I write about software engineering, verification, and practical technical deep dives."
+    Content = "I write about hardware engineering, verification, and practical technical deep dives. My focus is on verification advancements, debug methods, learnings in the HW development."
 
   # Social icons (add/remove as you like)
   [[params.socialIcons]]
