@@ -16,6 +16,44 @@
   --link-color: var(--accent);
 }
 
+
+/* Deep Dark Background */
+:root {
+    --theme: #0d1117;
+    --entry: #161b22;
+    --primary: #00f2ff; /* Cyan Accent */
+    --secondary: #8b949e;
+    --tertiary: #30363d;
+    --content: #d1d5db;
+    --code-block-bg: #010409;
+}
+
+/* Add a Neon Glow to Headings */
+h1, h2, h3 {
+    color: var(--primary);
+    text-shadow: 0 0 5px rgba(0, 242, 255, 0.2);
+    font-family: 'Fira Code', monospace; /* Engineering feel */
+}
+
+/* Cyberpunk Card Hover Effect */
+.post-entry {
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+}
+
+.post-entry:hover {
+    transform: translateY(-5px);
+    border-color: #ff00ff; /* Magenta highlight on hover */
+    box-shadow: 0 0 15px rgba(255, 0, 255, 0.1);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: #0d1117; }
+::-webkit-scrollbar-thumb { background: #30363d; border-radius: 10px; }
+::-webkit-scrollbar-thumb:hover { background: #00f2ff; }
+
+
 :root[data-theme="dark"] {
   --theme: #0b0f19; /* deep slate */
 }
