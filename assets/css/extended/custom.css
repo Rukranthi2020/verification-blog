@@ -1,144 +1,54 @@
-/* PaperMod auto-loads: assets/css/extended/*.css
-   Premium "rich" look: subtle accents, better typography rhythm, soft shadows.
-*/
-
+/* 1. THEME VARIABLES - This sets the core colors */
 :root {
-  /* Understated accent (used mainly for links and small highlights) */
-  --accent: #2563eb; /* blue */
-
-  /* Make the reading column wider (PaperMod default is 720px) */
-  --main-width: 1040px;
-
-  /* Solid page background (outside content). PaperMod sets body bg to var(--theme). */
-  --theme: #f3f4f6; /* light gray */
-
-  /* PaperMod uses these CSS variables in multiple places */
-  --link-color: var(--accent);
+    --theme: #1a1c1e; 
+    --entry: #25282c;
+    --primary: #00f2ff; 
+    --secondary: #94a3b8;
+    --tertiary: #334155;
+    --content: #e2e8f0; 
+    --code-block-bg: #0f172a;
 }
 
-
-/* Deep Dark Background */
-:root {
-    --theme: #0d1117;
-    --entry: #161b22;
-    --primary: #00f2ff; /* Cyan Accent */
-    --secondary: #8b949e;
-    --tertiary: #30363d;
-    --content: #d1d5db;
-    --code-block-bg: #010409;
+/* 2. THE BACKGROUND - Creates the "expensive" depth */
+body {
+    background: radial-gradient(circle at top, #2d333b 0%, #1a1c1e 100%) !important;
+    background-attachment: fixed;
 }
 
-/* Add a Neon Glow to Headings */
-h1, h2, h3 {
-    color: var(--primary);
-    text-shadow: 0 0 5px rgba(0, 242, 255, 0.2);
-    font-family: 'Fira Code', monospace; /* Engineering feel */
-}
-
-/* Cyberpunk Card Hover Effect */
+/* 3. THE CARDS - This is the "High Maintenance" Glass look */
 .post-entry {
-    transition: all 0.3s ease;
-    border: 1px solid transparent;
+    background: rgba(37, 40, 44, 0.6) !important;
+    backdrop-filter: blur(12px); /* Makes the background look like frosted glass */
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    border-radius: 16px !important;
+    margin-bottom: 24px;
+    padding: 30px;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .post-entry:hover {
+    background: rgba(45, 50, 60, 0.8) !important;
+    border-color: var(--primary) !important;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
     transform: translateY(-5px);
-    border-color: #ff00ff; /* Magenta highlight on hover */
-    box-shadow: 0 0 15px rgba(255, 0, 255, 0.1);
 }
 
-/* Custom Scrollbar */
-::-webkit-scrollbar { width: 8px; }
-::-webkit-scrollbar-track { background: #0d1117; }
-::-webkit-scrollbar-thumb { background: #30363d; border-radius: 10px; }
-::-webkit-scrollbar-thumb:hover { background: #00f2ff; }
-
-
-:root[data-theme="dark"] {
-  --theme: #0b0f19; /* deep slate */
+/* 4. TYPOGRAPHY - Clean, sharp engineering look */
+h1, h2, h3 {
+    letter-spacing: -0.02em;
+    font-weight: 700;
+    color: var(--primary);
 }
 
-/* Safety override (in case any rule sets body background explicitly later) */
-body {
-  background: var(--theme) !important;
+.post-title {
+    font-size: 1.8rem;
+    line-height: 1.3;
 }
 
-/* PaperMod sets `.list { background: var(--code-bg); }` which can hide the page background.
-   Ensure list pages also use the solid page background.
-*/
-.list,
-body.list {
-  background: var(--theme) !important;
-}
-
-/* Typography + spacing (subtle) */
-.post-content {
-  line-height: 1.75;
-  letter-spacing: 0.1px;
-}
-
-/* Underlined links, but not loud */
-a,
-.post-content a {
-  color: var(--link-color);
-  text-decoration-thickness: 1.5px;
-  text-underline-offset: 3px;
-}
-
-a:hover,
-.post-content a:hover {
-  color: color-mix(in srgb, var(--accent) 80%, black);
-}
-
-/* Header: glassy, clean (no gradient stripe) */
-.header {
-  position: sticky;
-  top: 0;
-  backdrop-filter: saturate(180%) blur(12px);
-  border-bottom: 1px solid rgba(127, 127, 127, 0.18);
-}
-
-/* Card look for entries: soft border + gentle elevation */
-.post-entry,
-.first-entry,
-.archive-entry {
-  border: 1px solid rgba(127, 127, 127, 0.16);
-  box-shadow:
-    0 1px 2px rgba(0, 0, 0, 0.05),
-    0 12px 30px rgba(0, 0, 0, 0.06);
-  border-radius: 14px;
-}
-
-/* Let the page background show through; keep main container transparent */
-.main {
-  background: transparent;
-}
-
-/* Give content surfaces a subtle "glass" fill so text remains readable */
-.post-single,
-.post-entry,
-.first-entry,
-.archive-entry {
-  background: color-mix(in srgb, var(--entry) 92%, transparent);
-  backdrop-filter: saturate(160%) blur(10px);
-}
-
-/* Code blocks: slightly more premium */
-pre {
-  border-radius: 12px;
-}
-
-code {
-  border-radius: 8px;
-}
-
-/* Tags: pill style, subtle */
-.post-tags a {
-  border: 1px solid rgba(127, 127, 127, 0.18);
-  background: rgba(127, 127, 127, 0.08);
-}
-
-/* Home intro: a touch larger */
-.home-info .entry-content {
-  font-size: 1.05rem;
+/* 5. NAVIGATION GLOW - Subtle tech accent */
+.menu a:hover {
+    color: var(--primary);
+    text-shadow: 0 0 8px rgba(0, 242, 255, 0.5);
 }
