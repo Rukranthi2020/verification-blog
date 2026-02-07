@@ -1,6 +1,6 @@
 ---
 title: "Formal Verification in Complex ASIC IP: Why It Matters (Coherency, GPU, Security, Power)"
-date: 2026-02-07T00:03:00-0600
+date: 2026-02-06T18:05:00-0600
 draft: false
 summary: "A technical, manager-friendly view of why formal verification is essential for complex ASIC IP: catching corner cases, preventing late escapes, validating power/reset behavior, and turning requirements into executable, regression-proof properties."
 tags: ["Formal Verification", "ASIC", "IP", "Coherency", "GPU", "Security", "Low Power", "Verification", "SVA", "Property Checking"]
