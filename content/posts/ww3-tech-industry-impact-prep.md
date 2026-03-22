@@ -1,7 +1,7 @@
 ---
 title: "World War 3 and the Semiconductor Industry: Impacts and What to Prepare For"
 date: 2026-03-22T11:59:00-06:00
-draft: true
+draft: false
 ---
 
 > **Note (scope + uncertainty):** “World War 3” is often used as shorthand for a range of escalation scenarios (regional war expanding, major-power conflict, sustained multi-theater confrontation). Impacts on semiconductors depend heavily on **where** conflict occurs, **who** is involved, and **how long** it lasts. This post is intentionally practical and non-alarmist: it’s about resilience planning for people working in the silicon industry.
